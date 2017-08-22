@@ -1,0 +1,7 @@
+.orderInfor{ font-family: "微软雅黑" }
+.orderDetail{ background:#fff; margin:10px auto; padding:10px; font-size:34rpx; line-height: 1.8}
+.orderDetail text{ display:block}
+.totalMoney{ background:#fff; padding:10px}
+.orderSubmit{width: 100%;height: 40px;background: #e38;border-radius: 0;color: #fff;font-size: 14px;position: fixed;bottom: 0;line-height: 40px;z-index: 2}
+.titleInfor{ padding:10px 10px 0; display:block}
+.seeInfor{color:#e38}

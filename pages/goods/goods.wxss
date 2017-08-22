@@ -1,0 +1,25 @@
+.goodsMain{ background:#fff; font-family: '微软雅黑'; color:#333; padding-bottom:40px}
+.titlePrice{ padding:15px}
+.shop_price{position:relative }
+.redColor{ color:#ed3366}
+.goodsTitle{ display:block; padding-bottom:10px}
+.marketPrice{ color:#999; text-decoration: line-through; padding-left:10px}
+.goodNum{ position:absolute; right:15px; width:95px; top:0}
+.goodNum input { width:40px; float:left; text-align:center; margin-top:2px}
+.goodNum text { float:left; width:24px; height:24px; line-height: 24px; text-align: center; border-radius: 50%; border:1px solid #bbb}
+.info_goods { height: 48px; background: #f8f8f8; line-height: 48px; padding: 0 15px; text-align: center;}
+.info_goods view{ width:33.33%; float:left; font-size:14px}
+.info_goods image{ margin-bottom:-2px; width:17px; height:17px}
+.goodsDet{ padding:15px; font-size:14px}
+.detTitle{ color:#ed3366; padding:5px 0; display:block}
+.goodsDet image{ max-width:100%; width:100%; height:auto}
+.fixedFooter{ position:fixed; width:20rem; height:40px; background:#ed3366; bottom:0; color:#fff}
+.fixedFooter .addToCart{ position:relative; left:8rem; width:12rem; background:#ed3366; height:40px; line-height: 40px; text-align: center }
+.addToCart > view{ display: inline-block}
+.addToCart text{ display:inline-block; font-size:14px; padding-left:5px}
+.fixedFooter .leftIcon { width:8rem; position:absolute; left:0; top:0}
+.leftIcon > view{ width: 4rem; height:4rem; background:#ed3366; float:left; text-align: center; line-height: 3rem; background:#3EAF0E}
+.leftIcon .icon-yzg-shouc_no{ background:#ffa132}
+.fixedFooter .iconfont-yzg {font-size:20px}
+.goodsMain swiper{ height:240px}
+.goodsMain swiper image{margin:10px auto; display:block}

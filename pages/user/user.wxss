@@ -1,0 +1,126 @@
+/**user.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.nav-item .nav-image {
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.nav-item text {
+  padding-top: 20rpx;
+  font-size: 25rpx;
+}
+
+.my-order_lists {
+  background: #fff;
+}
+
+.my-order_lists .all_list {
+  padding: 10px 14px;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.my-order_lists .all_list .my_order {
+  flex: 1;
+  font-size: 15px;
+}
+
+.my-order_lists .all_list .check-all_list label {
+  font-size: 14px;
+}
+
+.my-order_lists .list_status {
+  text-align: center;
+  padding: 4px 0;
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+  display: flex;
+}
+
+.my-order_lists .list_status .iconfont-yzg {
+  font-size: 26px;
+}
+
+.info_list {
+  margin-top: 8px;
+  background: #fff;
+}
+
+.weui_cell {
+  position: relative;
+  display: flex;
+  padding: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #dadada;
+}
+
+.weui_cell_hd {
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.weui_cell_hd image {
+  width: 100%;
+  height: 20px;
+  vertical-align: -2px;
+}
+
+.weui_cell_bd {
+  display: inline-block;
+}
+
+.weui_cell_bd_p {
+  font-size: 14px;
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 40px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  background: #f00;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 8px;
+}
+
+.with_arrow {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

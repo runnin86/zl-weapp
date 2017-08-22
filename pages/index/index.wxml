@@ -1,0 +1,90 @@
+<scroll-view scroll-y="true" height="100%">
+<!--头部导航栏-->
+  <scroll-view scroll-x="true" class="nav-slide" style="width: 100%">
+    <view class="active">首页</view>
+    <block wx:for="{{navs_slide}}" wx:for-item="slide" wx:key="slide.cat_id">
+      <view>
+        <text>{{slide.cat_name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <navigator url="/pages/category/category" hover-class="none" class="category" >
+    <image src="/assets/images/category.png" mode="widthFix" ></image>
+  </navigator>
+<!--轮播图-->
+  <swiper style="height:410rpx;" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{slides}}" wx:for-item="slide" wx:key="id">
+      <swiper-item>
+        <navigator url="{{slide.url}}">
+          <image class="slide-img" src="{{slide.img}}" mode="aspectFit" />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--间隔线-->
+  <view class="separate"></view>
+  <!--每日上新-->
+  <view class="cate-container">
+    <!--标题-->
+    <view class="category-title">
+      <view>
+        <text class="name">今日福利 · 每日上新</text>
+      </view>
+    </view>
+    <block wx:for="{{hot_products}}" wx:for-item="hotGoodsList" wx:key="hotGoodsList.hotId">
+    <!--特卖banner-->
+      <view class="item">
+        <image class="head-img" src="{{hotGoodsList.imgSrc}}" mode="widthFix"></image>
+      </view>
+      <!--特卖商品描述-->
+      <view class="hot-sale_info">
+        <view class="goods_info">
+          <view class="goods_title">
+            <text class="discount">{{hotGoodsList.discount}}</text>
+            <text>{{hotGoodsList.brief}}</text>
+          </view> 
+          <view class="goods_detail">
+            {{hotGoodsList.detail}}
+          </view>
+        </view>
+        <view class="buy_info">
+          <text class="discount_price"> {{hotGoodsList.promotePrice}}</text>
+          <text class="origin_price"> {{hotGoodsList.originPrice}}</text> 
+          <text class="buy_btn">抢</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!--间隔线-->
+  <view class="separate"></view>
+  <!--楼层-->
+  <view class="recommend-goods">
+    <!--楼层banner-->
+    <navigator>
+      <image class="goods-banner_pic" src="/assets/images/floorBanner/beauty.jpg" mode="widthFix" />
+    </navigator>
+    <!--楼层商品-->
+    <view class="goods-lists">
+      <block wx:for="{{floorGoods}}" wx:for-item="goodsList" wx:key="{{goodsList.gid}}">
+        <navigator class="sub-goods_list" url="{{goodsList.goods_url}}">
+          <view class="goods-img">
+            <image src="{{goodsList.imgSrc}}" mode="scaleToFill" />
+          </view>
+          <view class="goods-brief">{{goodsList.brief}}</view>
+          <view class="goods-title">{{goodsList.title}}</view>
+          <view class="goods-price">
+            <text class="promote">{{goodsList.promotePrice}}</text>
+            <text class="goods-price_origin">{{goodsList.originPrice}}</text>
+          </view>
+        </navigator>
+      </block>
+      <navigator class="sub-goods_list" style="display: flex;">
+        <view class="see_more">
+          <text class="ch_more">查看更多</text>
+          <text class="eng_more">See More</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+</scroll-view>

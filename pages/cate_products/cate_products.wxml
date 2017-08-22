@@ -1,0 +1,49 @@
+<!--cate_products.wxml-->
+<view class="cate_box">
+  <!--分类查询-->
+  <view class="search_sort">
+    <block wx:for="{{classifyList}}" wx:for-item="classifyItem" wx:key="classifyItem.id">    
+      <view id="{{classifyItem.id}}" class="{{classifyItem.id === checked ? 'is_checked' : ''}}" bindtap="classifyCheck">
+        <text>{{classifyItem.listName}}</text>
+        <i wx:if="{{classifyItem.id === '1'}}" class="{{tab_arrow ? 'click_down' : 'click_up'}}"></i>
+        <view id="arrow" class="{{arrow}}" wx:if="{{classifyItem.id === '3'}}">
+          <i class="arrow_up"></i>
+          <i class="arrow_down"></i>
+        </view>
+      </view>
+    </block>
+    <!--大分类别时显示小分类-->
+    <view class="smallSorts" wx:if="{{sortsList.length !== 0}}">
+      <block wx:for="{{sortsList}}" wx:for-item="smallSort" wx:key="{{smallSort.id}}">
+        <text id="{{smallSort.id}}" class="{{smallSort.id === smallSortChecked ? 'sort_item_checked' : ''}}" bindtap="smallSortChoose">{{smallSort.name}}</text>
+      </block>
+    </view>
+    <!--弹窗遮罩-->
+    <view class="pullList" wx:if="{{show_list}}">
+      <block wx:for="{{integrativeList}}" wx:for-item="selList">
+        <view id="{{selList.id}}" class="{{selList.id === checknum  ? 'select' : ''}}" bindtap="listCheck">
+          <text>{{selList.list}}</text>
+          <i class="check"></i>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!--类别商品-->
+  <view class="goods-lists">
+    <block wx:for="{{goodsList}}" wx:for-item="goodsList" wx:key="goodsList.gid">
+      <navigator class="sub-goods_list" url="{{goodsList.goods_url}}">
+        <view class="goods-img">
+          <image src="{{goodsList.imgSrc}}" mode="scaleToFill" />
+        </view>
+        <view class="goods-brief">{{goodsList.brief}}</view>
+        <view class="goods-title">{{goodsList.title}}</view>
+        <view class="goods-price">
+          <text class="promote">{{goodsList.promotePrice}}</text>
+          <text class="goods-price_origin">{{goodsList.originPrice}}</text>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,377 @@
+page {
+  font-family: "微软雅黑";
+}
+.cart_box {
+  display: flex;
+  flex-direction:column;
+  height:100%;
+}
+.cart_content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+}
+/*有商品购物车*/
+.goods_cart {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.goods_cart_box {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  background: #fff;
+  flex: auto;
+  border-bottom: 2rpx solid #eee;
+}
+
+.cart_checkbox {
+  position: relative;
+  width: 60rpx;
+  height: 80rpx;
+}
+.checked::before{
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: #ef0021;
+  position: absolute;
+  top: 20rpx;
+}
+.checked::after {
+  content: '';
+  width: 22rpx;
+  height: 10rpx;
+  border-left: 4rpx solid #fff;
+  border-bottom: 4rpx solid #fff;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 30rpx;
+  left: 10rpx;
+}
+.unchecked::before {
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: transparent;
+  position: absolute;
+  top: 20rpx;
+}
+.goods_cart .shop_name {
+  flex: auto;
+  display: -webkit-flex;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #f8f8f8;
+  font-weight: bold;
+  padding-left:30rpx;
+  font-size: 30rpx;
+}
+
+.goods_cart .check_status {
+  flex: none;
+  display: -webkit-flex;
+  display:flex;
+  align-items:center;
+  width:60rpx;
+  padding-left:30rpx;
+}
+.goods_cart .goods_pic {
+  flex: none;
+  display: -webkit-flex;
+  display:flex;
+  align-items:center;
+  padding:10rpx 10rpx 10rpx 0;
+}
+
+.goods_pic image {
+  width:160rpx;
+}
+
+.goods_cart .goods_detail {
+  flex: auto;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods_cart .goods_detail .title {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.goods_cart .goods_detail .title .gd_text{
+  flex: auto;
+  font-size: 26rpx;
+  height: 80rpx;
+  overflow: hidden;
+  padding-top: 20rpx;
+}
+
+.goods_cart .goods_detail .title .del_pic{
+  flex: none;
+  width:68rpx;
+  height: 60rpx;
+}
+
+.goods_detail .item_single {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.goods_detail .item_single .price {
+  flex: auto;
+  color: #ef0021;
+}
+
+.goods_detail .item_single .quantity {
+  flex: none;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 30rpx 20rpx 0;
+}
+
+.quantity .op {
+  /*border: 1rpx solid lightgrey;*/
+  width: 60rpx;
+  font-size: 32rpx;
+  font-weight: 800;
+  line-height: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  background: #eee;
+}
+
+.quantity .number {
+  z-index: 1;
+  /*border-top: 1rpx solid lightgrey;*/
+  /*border-bottom: 1rpx solid lightgrey;*/
+  line-height: 60rpx;
+  height: 60rpx;
+  text-align: center;
+}
+
+.quantity .input {
+  width: 80rpx;
+  text-align: center;
+  height: 60rpx;
+}
+/*空购物车*/
+.goods-alert_title {
+  text-align: center;
+}
+
+.goods-alert_title .goods-alert_pic {
+  width: 300rpx;
+  margin: 0 auto;
+}
+
+.goods-alert_title .goods-alert_content .no-goods_cart {
+  font-size: 30rpx;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.goods-alert_title .goods-alert_content .random-stroll_shop {
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #000;
+  font-size: 16px;
+  line-height: 60rpx;
+  width: 200rpx;
+  margin: 0 auto;
+}
+
+.icon-yzg-gouwuchekong {
+  font-size: 160rpx;
+}
+/*为你推荐*/
+.title_tui {
+  position: relative;
+  text-align: center;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  line-height: 2;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 15px;
+  padding-top: 4px;
+}
+
+span.line_tuijian {
+  position: absolute;
+  display: block;
+  top: 38rpx;
+  width: 36%;
+  border-top: 2rpx solid #ddd;
+}
+/*为你推荐商品样式*/
+.goods-lists{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+image.goods-banner_pic {
+  width: 100%;
+}
+
+.goods-lists .sub-goods_list{
+	margin:10rpx 0.5% 0;
+  width: 49%;
+	background:#fff;
+	position:relative;
+  height: 540rpx;
+}
+
+.goods-img {
+  display: flex;
+}
+
+.goods-img image{
+	border-bottom:2rpx solid #ddd;
+  width: 368rpx;
+  height: 368rpx;
+}
+
+.goods-lists .goods-title{
+	font-size: 24rpx;
+  color: #666;
+  overflow: hidden;
+  height: 56rpx;
+  line-height: 28rpx;
+  padding: 8rpx 16rpx 0;
+}
+
+.goods-lists .goods-brief{
+	font-size: 24rpx;
+  overflow: hidden;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 12rpx 16rpx 0;
+  font-weight: bold;
+}
+
+.goods-lists .goods-price{
+  font-size: 28rpx;
+  padding: 10rpx 16rpx;
+}
+
+.goods-lists .goods-price .promote {
+  color: #ef0021;
+}
+
+.goods-lists .goods-price .goods-price_origin{
+	color: #999;
+  text-decoration: line-through;
+  font-size: 24rpx;
+}
+
+.see_more{
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:center;
+  flex:auto;
+  align-items:center;
+}
+
+.see_more .ch_more {
+  color: #ef0021;
+}
+
+.see_more .eng_more {
+  border-top: 2rpx solid #ccc;
+  color: #999;
+}
+/*结算*/
+.checkout {
+  position: relative;
+  height: 110rpx;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items:center;
+  background: #fff;
+  border-top: 1rpx solid #eee;
+  padding-left: 30rpx;
+}
+
+.all_check {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.checkout_info {
+  margin-left: 30rpx;
+}
+
+.checkout_info .price {
+  color: #ef0021;
+}
+
+.layout_checkout {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  flex: auto;
+}
+.layout_checkout .btn_checkout {
+  margin-right:30rpx;
+  background: #ef0021;
+  color: #fff;
+  border-radius: 0;
+  padding: 14rpx 28rpx;
+  font-size: 32rpx;
+
+}
+/*为你推荐原商品样式*/
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.item {
+  flex-direction: column;
+  width: 50%;
+  background-color: white;
+}
+
+.item-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 15rpx 15rpx 20rpx;
+  min-height: 500rpx;
+}
+
+.item-block image {
+  width: 100%;
+  height: 335rpx;
+}
+
+.item-block .first-line {
+  font-size: 27rpx;
+  line-height: 34rpx;
+  text-align: center;
+}
+
+.item-block .second-line {
+  font-size: 32rpx;
+  color: red;
+  text-align: center;
+}

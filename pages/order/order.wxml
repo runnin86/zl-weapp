@@ -1,0 +1,34 @@
+<view class="stv-container">
+  <!--头部导航-->
+  <view class="tab-bar">
+    <view wx:for="{{tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+  </view>
+  <!--订单列表-->
+  <view class="scroll-view">
+    <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+      <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
+        <scroll-view style="height:100%" scroll-y>
+          <view wx:for="123456" wx:key="unique">
+            <view class="order_list">
+              <view class="order_status">
+                订单状态 : 待付款
+              </view>
+              <view class="order_info">
+                <image src="/assets/images/testGoods/test1.jpg" style="width: 64px;" mode="widthFix"></image>
+                <view class="detail">
+                  <text>订单编号 b149552580394</text>
+                  <text>订单金额 ￥30.00</text>
+                  <text>订单日期 2017-6-6 14:15:04</text>
+                </view>
+                <image src="/assets/images/icon-arrowdown.png" style="width: 12px;" mode="widthFix"></image>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

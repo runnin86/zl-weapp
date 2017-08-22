@@ -1,0 +1,21 @@
+.orderfill{ font-size: 14px; font-family: '微软雅黑'; color:#333; padding-bottom:50px}
+.showAddress{ position:relative;}
+.titleInfor{ color:#999; height:34px; line-height: 34px; border-bottom:1px solid #eee; display:block; margin-bottom:10px}
+.editBtn{ position:absolute; right:0; top:30px}
+.addressFill, .goodsShow, .orderPrice{ background:#fff; padding:15px; margin:10px auto}
+.editBtn image{ width:20px; height:20px}
+.showAddress text{display:block}
+.goodsShow{ overflow: hidden}
+.imgPrice{ position:relative; padding-left:90px; height:80px}
+.goodsShow image{width:80px; height:80px; position:absolute; left:0}
+.goodsShow .goodsName{vertical-align: middle; height:80px; display:table-cell }
+.imgPrice{ border-bottom:1px solid #eee; padding-bottom:10px}
+.goodsName text{display:block;}
+.showBottom{ text-align: right; padding-top:10px}
+.quantityPrice{ padding-top:5px; color:#777}
+.orderPrice > view{  text-align:right; color:#666}
+.orderSubmit{width: 100%;height: 40px;background: #e38;border-radius: 0;color: #fff;font-size: 14px;position: fixed;bottom: 0;line-height: 40px;z-index: 2}
+.addressAlter text{ display: inline-block; height:2.4rem; line-height: 2.4rem; text-align: right; padding-right:5px; width:28%}
+.addressAlter input{z-index: 0; display:inline-block; font-family: '微软雅黑'; height:1.4rem; line-height: 1.4rem; color:#333; overflow:inherit; border:1px solid #ddd; border-radius:4px; padding:0.3rem 0 0 0.3rem}
+.listStyle{ padding-top:10px}
+.saveAdd{ width:8rem; height:2rem; line-height: 2rem; border-radius:0; font-size:14px; margin-top:10px}

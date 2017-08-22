@@ -1,0 +1,68 @@
+<view class="orderfill">
+  <!--收货人信息-->
+  <view class="addressFill">
+    <text class="titleInfor">收货人信息</text>
+    <!--收货人信息展示-->
+    <view class="showAddress" wx:if = "{{editState == 'noEdit'}}">
+      <text> 胡洋洋  15811088017</text>
+      <text>安徽-芜湖-三山区</text>
+      <text>创业大街三号楼三楼</text>
+      <text>130425199410174222</text>
+      <view class="editBtn" bindtap="editOn">
+        <image src="/assets/images/icon-arrowdown.png"></image>
+      </view>
+    </view>
+    <!--收货人信息修改-->
+    <view class="addressAlter" wx:else>
+      <radio-group>
+        <view wx:for="{{addList}}" wx:key = "this" class="listStyle">
+          <label>
+            <radio value="{{item.consignee}}" name="consigneeAdd" checked="{{item.checked}}" />{{item.consignee}}
+          </label>
+          <block>
+            <view>
+              <text>姓名：</text> 
+              <input type="text" value = "{{item.consignee}}" />
+            </view>
+            <view>
+              <text>省市：</text> 
+              <input type="text" value= "{{item.province}}" />
+            </view>
+            <view>
+              <text>详细地址：</text> 
+              <input type="text" value = "{{item.address}}" />
+            </view>
+            <view>
+              <text>手机：</text> 
+              <input type="text" value = "{{item.mobile}}" />
+            </view>
+            <view>
+              <text>身份证号：</text>
+              <input type="text" value = "{{item.idCard}}" />
+            </view>
+          </block>
+        </view>
+      </radio-group>
+      <button class="redBg saveAdd" bindtap="saveAddById">保存当前地址</button>
+    </view>
+  </view>
+  <!--商品展示-->
+  <view class="goodsShow">
+    <text class="titleInfor">自营商品</text>
+    <view class="imgPrice">
+      <image src="/assets/images/testGoods/test1.jpg"></image>
+      <view class="goodsName">
+        <text>韩国Sulwhasoo雪花秀旅行装中小样五件套装</text>
+        <text class="quantityPrice">￥99.00  数量：1</text>
+      </view>
+    </view>
+    <view class="showBottom">共1件商品 总价:￥99.00</view>
+  </view>
+  <!--订单结算-->
+  <view class="orderPrice">
+    <text class="titleInfor">订单结算</text>
+    <view>商品总价： ￥99.99</view>
+    <view>应付款金额： ￥99.99</view>
+  </view>
+  <button class="orderSubmit" bindtap="toSubmit">提交订单</button>
+</view>

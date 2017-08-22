@@ -1,0 +1,127 @@
+page {
+  font-family: "微软雅黑";
+  background-color: #f1f1f1;
+}
+
+/*分类样式*/
+.classify {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.classify_item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.classify_item .theme {
+  flex: auto;
+  padding: 10rpx 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+  height: 48rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #ed3366;
+}
+
+.classify_item .item_grid {
+  display: -webkit-flex;
+  display: flex;
+  background: #fff;
+  flex-wrap: wrap;
+  padding-bottom: 16rpx;
+}
+
+.item_grid .context {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding-top: 16rpx;
+}
+
+.context image {
+  width: 76rpx;
+}
+.context text {
+  font-size: 22rpx;
+}
+
+/*.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 100rpx;
+}
+
+.item {
+  flex-direction: column;
+  width: 50%;
+  background-color: white;
+}
+
+.item-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 15rpx 15rpx 20rpx;
+  min-height: 500rpx;
+}
+
+.item-block image {
+  width: 100%;
+  height: 335rpx;
+}
+
+.item-block .first-line {
+  font-size: 27rpx;
+  line-height: 34rpx;
+  text-align: center;
+}
+
+.item-block .second-line {
+  font-size: 32rpx;
+  color: red;
+  text-align: center;
+}
+
+.offline-notice {
+  margin: 100rpx 10rpx 0 10rpx;
+  padding: 40rpx 0 40rpx 0;
+  border-radius: 5rpx;
+  text-align: center;
+  background-color: white;
+  font-size: 33rpx;
+}
+
+
+
+.menu {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #fff;
+  border-bottom: #eee solid 1px;
+  z-index: 100000;
+}
+
+.top-nav {
+  white-space: nowrap;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.top-btn {
+  display: inline-block;
+  padding: 22rpx;
+}
+
+.top-hoverd-btn {
+  color: #42bd56;
+  border-bottom: #42bd56 solid 1px;
+}*/

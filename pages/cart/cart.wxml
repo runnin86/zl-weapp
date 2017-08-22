@@ -1,0 +1,180 @@
+<!--购物车无商品-->
+<!--<view class="goods-alert_title">
+  <view class="goods-alert_pic">
+    <label class="iconfont-yzg icon-yzg-gouwuchekong"></label>
+  </view>
+  <view class="goods-alert_content">
+    <view class="no-goods_cart">
+      您的购物车空空如也
+    </view>
+    <view class="random-stroll_shop">
+      随便逛逛
+    </view>
+  </view>
+</view>-->
+<view class="cart_box">
+  <view class="cart_content">
+    <!--购物车有商品--> 
+    <view class="goods_cart">
+      <view class="shop_name">
+        <view class="cart_checkbox {{check ? 'checked' : 'unchecked'}}" bindtap="checkChange"></view>
+        甜甜的优选屋自营
+      </view>
+      <view class="goods_cart_box">
+        <view class="check_status">
+          <view class="cart_checkbox checked"></view>
+        </view>
+        <view class="goods_pic">
+          <image src="/assets/images/testGoods/test1.jpg" mode="widthFix"></image>  
+        </view>
+        <view class="goods_detail">
+          <view class="title">
+            <view class="gd_text">打发第三方</view>
+            <image class="del_pic" src="/assets/images/del.png"  mode="aspectFit"></image>
+          </view>
+          <view class="item_single">
+            <view class="price">￥39</view>
+            <view class="quantity">
+              <view class="op" bindtap="minusQuantity">
+                <text class="text">-</text>
+              </view>
+              <view class="number">
+                <input class="input" value="12" bindinput="bindChangeQuantity"></input>
+              </view>
+              <view class="op" bindtap="addQuantity" >
+                  <text class="text">+</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--为你推荐-->
+    <view class="title_tui">
+      <span class="line_tuijian" style="left: 0;"></span>
+      <span class="line_tuijian" style="right: 0;"></span>
+      <label class="iconfont-yzg icon-yzg-pointerdown" style="width: 14px;margin-bottom: 2px;"></label>
+      为你推荐
+    </view>
+    <!--为你推荐商品-->
+    <view class="goods-lists">
+      <navigator class="sub-goods_list">
+        <view class="goods-img">
+          <image src="/assets/images/testGoods/test1.jpg" mode="scaleToFill" />
+        </view>
+        <view class="goods-brief">速度发速度发速度发速度发速度发速度发速度发放</view>
+        <view class="goods-title">速度发放速度发放速度发放速度发放速度发放速度发放发放放但是</view>
+        <view class="goods-price">
+          <text class="promote">￥30</text>
+          <text class="goods-price_origin">￥40</text>
+        </view>
+      </navigator>
+      <navigator class="sub-goods_list">
+        <view class="goods-img">
+          <image src="/assets/images/testGoods/test1.jpg" mode="scaleToFill" />
+        </view>
+        <view class="goods-brief">速度发速度发速度发速度发速度发速度发速度发放</view>
+        <view class="goods-title">速度发放速度发放速度发放速度发放速度发放速度发放发放放但是</view>
+        <view class="goods-price">
+          <text class="promote">￥30</text>
+          <text class="goods-price_origin">￥40</text>
+        </view>
+      </navigator>
+      <navigator class="sub-goods_list">
+        <view class="goods-img">
+          <image src="/assets/images/testGoods/test1.jpg" mode="scaleToFill" />
+        </view>
+        <view class="goods-brief">速度发速度发速度发速度发速度发速度发速度发放</view>
+        <view class="goods-title">速度发放速度发放速度发放速度发放速度发放速度发放发放放但是</view>
+        <view class="goods-price">
+          <text class="promote">￥30</text>
+          <text class="goods-price_origin">￥40</text>
+        </view>
+      </navigator>
+      <navigator class="sub-goods_list">
+        <view class="goods-img">
+          <image src="/assets/images/testGoods/test1.jpg" mode="scaleToFill" />
+        </view>
+        <view class="goods-brief">速度发速度发速度发速度发速度发速度发速度发放</view>
+        <view class="goods-title">速度发放速度发放速度发放速度发放速度发放速度发放发放放但是</view>
+        <view class="goods-price">
+          <text class="promote">￥30</text>
+          <text class="goods-price_origin">￥40</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!--底部结算-->
+  <view class="checkout">
+    <view class="all_check" bindtap="checkChange">
+      <view class="cart_checkbox {{check ? 'checked' : 'unchecked'}}" ></view>
+      <text>全选</text>
+    </view>
+    <view class="checkout_info">
+      合计:
+      <text class="price">￥45.00</text>
+    </view>
+    <view class="layout_checkout">
+      <button class="btn_checkout">去结算(1)</button>
+    </view>
+  </view>
+</view>
+
+  <!--原商品列表样式-->
+<!--<view class="item-container">
+  <view class="item">
+    <view class="item-block" bindtap="bindTapProduct">
+      <image class="head-img" src="https://baye-media.oss-cn-shanghai.aliyuncs.com/uploads/product_image_files/170309/8bc72ded-f8e4-46cd-ac32-2537770531be.jpg" mode="aspectFit"></image>
+      <view class="first-line">
+        <text class="name">大红袍“世界茶源”精品小袋泡礼盒256克</text>
+      </view>
+      <view class="second-line">
+        <text>¥378.0</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-block" bindtap="bindTapProduct">
+      <image class="head-img" src="https://baye-media.oss-cn-shanghai.aliyuncs.com/uploads/product_image_files/170112/82b1c072-0c0c-4f10-9412-375028d27af4.jpg" mode="aspectFit"></image>
+      <view class="first-line">
+        <text class="name">乔家大院 私藏1755 清香型白酒 50斤 定制一周发货</text>
+      </view>
+      <view class="second-line">
+        <text>¥7999.0</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-block" bindtap="bindTapProduct">
+      <image class="head-img" src="https://baye-media.oss-cn-shanghai.aliyuncs.com/uploads/product_image_files/161217/309ced3c-7332-445c-a8de-cfc13f34f2a6.jpg" mode="aspectFit"></image>
+      <view class="first-line">
+        <text class="name">管到 月师太生态土鸡蛋年卡（360枚）</text>
+      </view>
+      <view class="second-line">
+        <text>¥1118.0</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-block" bindtap="bindTapProduct">
+      <image class="head-img" src="https://baye-media.oss-cn-shanghai.aliyuncs.com/uploads/product_image_files/161104/53665b63-d51e-49ba-87ab-29e099a8c27e.jpg" mode="aspectFit"></image>
+      <view class="first-line">
+        <text class="name">钱皇皇后系列步步生莲8斤蚕丝被</text>
+      </view>
+      <view class="second-line">
+        <text>¥12700.0</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-block" bindtap="bindTapProduct">
+      <image class="head-img" src="https://baye-media.oss-cn-shanghai.aliyuncs.com/uploads/product_image_files/170301/c21c6c43-f327-4acb-a4b1-ddced907eb99.jpg" mode="aspectFit"></image>
+      <view class="first-line">
+        <text class="name">煮饭神器 酒精炉蒸饭锅</text>
+      </view>
+      <view class="second-line">
+        <text>¥238.0</text>
+      </view>
+    </view>
+  </view>
+</view>-->

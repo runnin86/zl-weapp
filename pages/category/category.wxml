@@ -1,0 +1,61 @@
+<view class="classify">
+  <view class="classify_item">
+    <block wx:for="{{bigCate}}" wx:for-item="cateThemes" wx:key="{{cateThemes.id}}">
+      <view class="theme">{{cateThemes.bigItem}}</view>
+      <view class="item_grid">
+        <block wx:for="{{cateItems}}" wx:for-item="secCate" wx:key="{{secCate.oItmeId}}">
+          <navigator url="{{secCate.url}}" class="context" hover-class="none" wx:if="{{cateThemes.id === secCate.parentId}}">
+            <image src="{{secCate.src}}" mode="widthFix"></image>
+            <text>{{secCate.item}}</text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
+<!--原代码隐藏-->
+<!--<view class="menu">
+  <scroll-view scroll-x="true" class="top-nav">
+    <view bindtap="toHot" class="top-btn {{hot}}">热门</view>
+    <view bindtap="toFilm" class="top-btn {{film}}">电影</view>
+    <view bindtap="toReadBook" class="top-btn {{book}}">读书</view>
+    <view bindtap="toTelv" class="top-btn {{telv}}">电视</view>
+    <view bindtap="toActive" class="top-btn {{active}}">活动</view>
+    <view bindtap="toMusic" class="top-btn {{music}}">音乐</view>
+    <view bindtap="toOther" class="top-btn {{other}}">其他</view>
+    <view bindtap="toOther1" class="top-btn {{other1}}">其他1</view>
+  </scroll-view>
+</view>
+
+<view wx:if="{{!items}}">
+  <view class="offline-notice">正在加载中，请稍等...</view>
+</view>
+
+<view wx:elif="{{items.length === 0}}">
+  <view class="offline-notice">没有商品</view>
+</view>
+
+<view wx:elif="{{items.length > 0}}">
+  <scroll-view scroll-y="true" height="100%">
+    <view class="item-container">
+      <block wx:for="{{items}}" wx:for-item="item" wx:key="id">
+        <view class="item">
+          <view class="item-block" bindtap="bindTapProduct" data-id="{{item.id}}">
+            <image class="head-img" src="{{item['image-url']}}" mode="aspectFit"></image>
+            <view class="first-line">
+              <text class="name">{{item.name}}</text>
+            </view>
+            <view class="second-line">
+              <view wx:if="{{ accountType === '巴爷' }}">
+                <text>¥{{item['baye-price']}}</text>
+              </view>
+              <view wx:else>
+                <text>¥{{item['member-price']}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>-->

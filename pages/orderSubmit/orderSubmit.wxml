@@ -1,0 +1,14 @@
+<view>
+  <view class="orderInfor">
+    <text class="titleInfor">订单信息</text>
+    <view class="orderDetail">
+      <text>订单号：a149733970157</text>
+      <text>订单总额：￥100.00</text>
+      <text>已经支付：￥100.00</text>
+      <text>还需支付：￥100.00</text>
+      <view class="seeInfor" bindtap="seeOrderInfor">查看订单详情</view>
+    </view>
+    <view class="totalMoney">总金额：￥100</view>
+    <button class="orderSubmit" bindtap="toPay">去支付</button>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+<view class="goodsMain">
+  <!--主图轮播图-->
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{goodsImg}}" wx:key = "{{goodsImg}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--标题价格规格-->
+  <view class="titlePrice">
+    <text class="goodsTitle">
+      韩国 Sulwhasoo雪花秀旅行装中小样五件套装
+    </text>
+    <view class="shop_price">
+      <text class="redColor">￥39.90</text>
+      <text class="marketPrice">￥49.90</text>
+      <view class="goodNum clearfix">
+        <text class="add" bindtap="numChange" data-type = 'del'>-</text>
+        <input type="text" value="{{goodsNum}}" name="number" />
+        <text class="delete" bindtap="numChange" data-type = 'add' style="cursor:pointer">+</text>
+      </view>
+    </view>
+  </view>
+  <view class="info_goods clearfix">
+      <view style="text-align:left">
+        <image src="/assets/images/zheng.png" /> 正品保证
+      </view>
+      <view style="text-align:center;">
+        <image src="/assets/images/qu.png" /> 全球直采
+      </view>
+      <view style="text-align:right;">
+        <image src="/assets/images/bao.png" /> 满99包邮
+      </view>
+  </view>
+  <!--商品详情-->
+  <view class="goodsDet">
+    <text class="detTitle">#商品详情#</text>
+    <view>
+      <text>以下是商品详情介绍，我编的，请勿当真，只是为了凑字数，没错，我就是个才女，还是小仙女</text>
+      <image src="/assets/images/floorBanner/beauty.jpg" mode="widthFix"></image>
+      <image src="/assets/images/floorBanner/child_care.jpg" mode="widthFix"></image>
+      <image src="/assets/images/floorBanner/food.jpg" mode="widthFix"></image>
+      <text>以下是商品详情介绍，我编的，请勿当真，只是为了凑字数，没错，我就是个才女，还是小仙女</text>
+      <image src="/assets/images/floorBanner/individual_care.jpg" mode="widthFix"></image>
+      <image src="/assets/images/floorBanner/nutrition.jpg" mode="widthFix"></image>
+      <image src="/assets/images/floorBanner/quality_life.jpg" mode="widthFix"></image>
+      <image src="/assets/images/floorBanner/skin_care.jpg" mode="widthFix"></image>
+    </view>
+  </view>
+  <!--底部导航-->
+  <view class="fixedFooter clearfix">
+    <view class="leftIcon">
+      <view>
+        <view class="iconfont-yzg icon-yzg-msnui-cart"></view>
+      </view>
+      <view bindtap="collect" class="iconfont-yzg icon-yzg-shouc_no"></view>
+    </view>
+    <view class="addToCart" bindtap="toOrderfill">
+      <view class="iconfont-yzg icon-yzg-msnui-cart"></view>
+      <text> 加入购物车</text>
+    </view>
+  </view>
+</view>

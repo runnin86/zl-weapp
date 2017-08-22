@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" height="100%">
+  <view class="container">
+
+    <view bindtap="bindViewTap" class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+
+    <view class="ucenter">
+      <view class="my-order_lists">
+        <view class="all_list" bindtap="goOrder" data-id="0">
+          <view class="my_order">
+            <label>我的订单</label>
+          </view>
+          <view class="check-all_list">
+            <label>查看全部订单</label>
+            <label class="iconfont-yzg icon-yzg-arrow"></label>
+          </view>
+        </view>
+
+        <view class="list_status">
+          <view class="nav-item" catchtap="goOrder" data-id="1">
+            <label class="iconfont-yzg icon-yzg-daifukuan"></label>
+            <text>待付款</text>
+          </view>
+          <view class="nav-item" catchtap="goOrder" data-id="2">
+            <label class="iconfont-yzg icon-yzg-icon83"></label>
+            <text>待发货</text>
+          </view>
+          <view class="nav-item" catchtap="goOrder" data-id="3">
+            <label class="iconfont-yzg icon-yzg-hongjiuchengicondaifahuo"></label>
+            <text>待收货</text>
+          </view>
+          <view class="nav-item" catchtap="goOrder" data-id="4">
+            <label class="iconfont-yzg icon-yzg-tuikuan"></label>
+            <text>退款/售后</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="info_list">
+        <block wx:for="{{userListInfo}}">
+          <view class="weui_cell">
+            <view class="weui_cell_hd">
+              <label class="iconfont-yzg {{item.icon}}"></label>
+            </view>
+            <view class="weui_cell_bd">
+              <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+            <view wx:if="{{item.unreadNum>0}}" class="badge">{{item.unreadNum}}</view>
+            <image src="../../assets/images/icon-arrowdown.png" class="with_arrow"></image>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</scroll-view>

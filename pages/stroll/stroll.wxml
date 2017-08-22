@@ -1,0 +1,10 @@
+<view class="menu">
+  <scroll-view scroll-x="true" class="top-nav">
+    <view bindtap="toAll" class="top-btn {{all}}">全部</view>
+    <view bindtap="toVideo" class="top-btn {{video}}">视频</view>
+    <view bindtap="toImage" class="top-btn {{image}}">图文</view>
+  </scroll-view>
+</view>
+<view style="margin-top:150rpx;text-align:center;">
+  <text wx:if="name!=''">{{name}}</text>
+</view>
